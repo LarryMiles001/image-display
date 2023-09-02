@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jude.css">
+    <link rel="stylesheet" href="https://fonts.google.com/">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+    <title>Document</title>
+</head>
+<body>
+    <h1>Display 1</h1>
+    <div class="images-container">
+        <div class="image-block">
+            <img src="Picture 167.jpeg" />
+        </div>
+        <div class="image-block active">
+            <img src="Picture 168.jpeg" />
+        </div>
+        <div class="image-block">
+            <img src="Picture 169.jpeg" />
+        </div>
+        <div class="image-block">
+            <img src="Facebook.jpeg" />
+        </div>
+        <div class="image-block">
+            <img src="Screen Shot 2023-08-10 at 11.55.13 AM.png" />
+        </div>
+    </div>
+    <!-- <div class="input-group">
+        <input type="text" id="frame" class="input-group_input" required>
+        <label for="fname" class="input-group_label">First name</label>
+    </div> -->
+    <h1>Display 2</h1>
+    <div class="gallery">
+        <div style="background-image: url(Picture\ 167.jpeg);"></div>
+        <div style="background-image: url(Picture\ 168.jpeg);"></div>
+        <div style="background-image: url(Picture\ 169.jpeg);"></div>
+        <div style="background-image: url(Facebook.jpeg);"></div>
+        <div style="background-image: url(Screen\ Shot\ 2023-08-10\ at\ 11.55.13\ AM.png);"></div>
+    </div>
+    <p id="demo"></p>
+    
+    <script>
+        const imageBlocks = document.querySelectorAll(".image-block")
+
+imageBlocks.forEach(block => {
+    block.addEventListener('click', () => {
+        imageBlocks.forEach(block2 => {
+            block2.classList.remove('active')
+        })
+
+        block.classList.add('active')
+    })
+})
+        
+        // class Train {
+        //     constructor(clor, lightsOn) {
+        //         this.color = color;
+        //         this.lightsOn = lightsOn;
+        //     }
+        //     toggleLights() {
+        //         this.lightsOn = !this.lightsOn;
+        //     }
+        //     lightsStatus() {
+        //         document.getElementById("demo"). innerHTML = 'Lights on?', this.lightsOn;
+        //     }
+        //     getSelf() {
+        //         document.getElementById("demo"). innerHTML = this;
+        //     }
+        //     getPrototype() {
+        //         var proto = Object.getPrototypeOf(this);
+        //         document.getElementById("demo"). innerHTML = proto;
+        //     }
+        // }
+        // var train4 = new Train('red', false);
+
+        // train4.toggleLights();
+
+
+
+    // Animal hyrachy
+    class Animal{
+        constructor(color, energy){
+            isActive();
+            if(energy > 0, energy -= 20){
+                console.log(energy);
+            } else if(energy <= 0, sleep()){
+                sleep();
+                energy +=20;
+                console.log(energy);
+            }
+        }
+    }
+    class Cat extends Animal{
+        constructor(sound, canJumpHigh, canClimbTrees, color, energy){
+            makeSound();
+            console.log(sound);
+        }
+    }
+    class Bird extends Animal{
+        constructor(sound, canFly, colo, energy){
+            makeSound();
+            console.log(sound);
+        }
+    }
+    class HouseCat extends Cat{
+        constructor(houseCatSound, sound, canJumpHigh, canClimbTrees){
+            makeSound()
+            if(option){
+                super.makeSound()
+                console.log(houseCatSound);
+            }
+        }
+    }
+    class Tiger extends Cat {
+        constructor(tigerSound, sound, canJumpHigh, canClimbTrees, color, energy){
+    makeSound(option)
+        if (option){
+            super.makeSound()
+       console.log(tigerSound)
+    }
+    }
+}
+class Parrot extends Bird{
+    constructor(canTalk, sound, canJumpHigh, canClimbTrees, color, energy){
+        makeSound()
+        if(option){
+            super.makeSound()
+        }
+        if(canTalk){
+            console.log("talking!");
+        }
+    }
+}
+
+
+// just somthing else
+class Animal{
+    constructor(lg){
+        this.legs = lg;
+    }
+}
+
+class Dog extends Animal{
+    constructor(){
+        super(4);
+    }
+}
+var result = new Dog();
+document.getElementById("demo"). innerHTML = result.legs;
+    </script>
+
+</body>
+</html>

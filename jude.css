@@ -1,0 +1,114 @@
+/* body{
+    background: rgb(36,0,35);
+    background: linear-gradient(90deg, rgba(36,0,35,1) 4%, rgba(117,156,152,1) 49%, rgba(252,255,0,1) 96%); 
+    }
+.material-symbols-outlined{
+    width: 30px;
+    height: 90px;
+    font-weight: 300;
+    color: coral;
+    font-size: 100rem;
+    cursor: not-allowed;
+} */
+
+body{
+    background-color: rgb(37, 183, 209);
+}
+.gallery{
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+    cursor: pointer;
+}
+.gallery>div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    transform: rotate(45deg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+.gallery>div:hover{
+    flex: 5;
+    transform: scale(0.75);
+}
+
+/* body{
+     background-color: cadetblue;
+}
+.input-group{
+    position: absolute;
+}
+.input-group_input{
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: 2px solid #fff;
+    background-color: transparent;
+    transition: outline-color 250ms;
+}
+.input-group_input:focus{
+    outline-color: #3c50ed;
+}
+.input-group_label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transform-origin: left;
+    color: #fff;
+    transition: transform 200ms;
+}
+.input-group_input:focus ~ .input-group_label,
+.input-group_input:valid ~ .input-group_label{
+    transform: translate(0, 35px) scale(0.9);
+} */
+
+
+
+body{
+    padding: 40px;
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.images-container{
+    display: flex;
+    gap: 3px;
+}
+
+.image-block{
+    --size: 90px;
+    width: var(--size);
+    cursor: pointer;
+    transition: transform 300ms, width 300ms;
+    filter: grayscale(100%);
+    transform: skew(var(--skew));
+}
+
+.image-block:hover{
+    filter: grayscale(0);
+}
+.image-block{
+    --skew: 5deg;
+}
+
+.image-block.active{
+    --size: 490px;
+    filter: grayscale(0);
+    --skew: 0;
+}
+
+.image-block.active ~ .image-block{
+    --skew: -5deg;
+}
+
+.image-block img{
+    width: 100%;
+    object-fit: cover;
+}
